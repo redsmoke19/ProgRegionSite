@@ -1,0 +1,45 @@
+.features {
+  margin: 0 0 40px 0;
+  @media screen and (min-width: $desktop-size) {
+    margin: 0 0 66px 0;
+  }
+  &__title {
+    color: $dark-color;
+    font-size: 29.5px;
+    font-weight: 800;
+    line-height: normal;
+    margin: 0 0 25px 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__list {
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+    }
+  }
+  &__item {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $desktop-size) {
+      width: 33.333%;
+    }
+  }
+  &__picture {
+    display: block;
+    margin: 0 0 17px 0;
+  }
+  &__img {
+    height: 254px;
+    width: auto;
+    @media screen and (min-width: $desktop-size) {
+      height: 338px;
+    }
+  }
+  &__text {
+    color: $dark-color;
+    font-size: 19.5px;
+    line-height: 22px;
+    text-align: center;
+  }
+}

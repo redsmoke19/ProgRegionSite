@@ -6,8 +6,9 @@
 //@include sprites($spritesheet-sprites);
 
 html {
-  font-family: 'Open Sans', Arial, serif;
+  font-family: $main-font;
   font-size: 16px;
+  font-weight: 400;
   height: 100%;
 }
 
@@ -96,6 +97,7 @@ button {
 .container {
   margin: 0 auto;
   max-width: $content;
+  padding:  0 20px;
   width: 100%;
 }
 
