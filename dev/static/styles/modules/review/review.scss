@@ -1,4 +1,8 @@
 .review {
+  margin: 0 0 50px 0;
+  @media screen and (min-width: $desktop-size) {
+    margin: 0;
+  }
   &__title {
     color: $dark-color;
     font-size: 29.5px;
@@ -12,9 +16,22 @@
       margin: 0 0 35px 0;
     }
   }
+  &__list {
+    @media screen and (min-width: $tablet-size) {
+      align-items: flex-end;
+      display: flex;
+    }
+    @media screen and (min-width: $desktop-size) {
+      justify-content: space-between;
+      padding: 0 0 60px 0;
+    }
+  }
   &__item {
     display: flex;
     flex-direction: column;
+    @media screen and (min-width: $desktop-size) {
+      width: 28%;
+    }
   }
   &__text {
     background-color: $white;

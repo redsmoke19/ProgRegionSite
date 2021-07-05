@@ -1,1 +1,104 @@
 footer { flex: 0 0 auto; }
+.footer {
+  background: url('../images/common/footer-bg-mobile@2x.png') no-repeat center;
+  background-size: cover;
+  padding: 40px 0 20px;
+  @media screen and (min-width: $tablet-size) {
+    background: url('../images/common/footer-bg-desktop@1x.png') no-repeat center;
+    background-size: cover;
+    @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background: url('../images/common/footer-bg-desktop@2x.png') no-repeat center;
+        background-size: cover;
+    }
+  }
+  &__inner {
+    margin: 0 0 66px 0;
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      margin: 0 0 200px 0;
+    }
+  }
+  &__text {
+    color: $white;
+    font-size: 19.5px;
+    line-height: normal;
+    margin: 0 0 25px 0;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 24.5px;
+      flex: 0 0 50%;
+      padding: 0 120px 0 0;
+    }
+  }
+  &__form {
+    position: relative;
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 50%;
+      padding: 0 105px;
+    }
+  }
+  &__input {
+    border: 2px solid $white;
+    border-radius: 10px;
+    color: $dark-color;
+    font-size: 17px;
+    line-height: 1;
+    margin: 0 0 27px 0;
+    padding: 23px 28px;
+    width: 100%;
+    &::placeholder {
+      color: $text-grey-color;
+    }
+    &--error {
+      border: 2px solid #00008b;
+      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  &__error {
+    display: none;
+    color: #00008b;
+    @media screen and (min-width: $desktop-size) {
+      left: 105px;
+      position: absolute;
+      top: -25px;
+    }
+  }
+  &__button {
+    margin: 0 0 22px 0;
+  }
+  &__policy {
+    color: $white;
+    font-size: 14.5px;
+    text-align: center;
+    a {
+      color: $white;
+    }
+  }
+  &__copyright {
+    color: $white;
+    font-size: 10px;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
